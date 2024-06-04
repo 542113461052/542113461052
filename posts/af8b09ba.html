@@ -1,0 +1,449 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>UML | liuming的个人博客</title><meta name="author" content="liuming"><meta name="copyright" content="liuming"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="UML概述 统一建模语言（UML）是一种用于软件开发的标准建模语言，用于描述、可视化、规范化和构建软件系统的结构和行为。 UML 由图形符号、文本标签和连接线组成，可以在不同的层次上描述系统的结构和行为。 UML 可以帮助开发团队更好地理解和沟通系统的设计和功能需求。 UML主要图包括：用例图，类图，序列图，状态图，活动图，组件图，部署图。  用例图（Use Case Diagram） 用例图描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UML">
+<meta property="og:url" content="http://example.com/posts/af8b09ba.html">
+<meta property="og:site_name" content="liuming的个人博客">
+<meta property="og:description" content="UML概述 统一建模语言（UML）是一种用于软件开发的标准建模语言，用于描述、可视化、规范化和构建软件系统的结构和行为。 UML 由图形符号、文本标签和连接线组成，可以在不同的层次上描述系统的结构和行为。 UML 可以帮助开发团队更好地理解和沟通系统的设计和功能需求。 UML主要图包括：用例图，类图，序列图，状态图，活动图，组件图，部署图。  用例图（Use Case Diagram） 用例图描述">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.imgtg.com/2023/01/21/SqAtX.jpg">
+<meta property="article:published_time" content="2024-06-04T15:58:44.000Z">
+<meta property="article:modified_time" content="2024-06-04T15:59:20.222Z">
+<meta property="article:author" content="liuming">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgtg.com/2023/01/21/SqAtX.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/af8b09ba.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'UML',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-04 23:59:20'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.imgtg.com/2023/01/21/SqAtX.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book-open"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 全部文章</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 所有标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 所有分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.imgtg.com/2023/01/21/Sot9s.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="liuming的个人博客"><span class="site-name">liuming的个人博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book-open"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 全部文章</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 所有标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 所有分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">UML</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-04T15:58:44.000Z" title="发表于 2024-06-04 23:58:44">2024-06-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-04T15:59:20.222Z" title="更新于 2024-06-04 23:59:20">2024-06-04</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>统一建模语言（UML）是一种用于软件开发的标准建模语言，用于描述、可视化、规范化和构建软件系统的结构和行为。</li>
+<li>UML 由图形符号、文本标签和连接线组成，可以在不同的层次上描述系统的结构和行为。</li>
+<li>UML 可以帮助开发团队更好地理解和沟通系统的设计和功能需求。</li>
+<li>UML主要图包括：用例图，类图，序列图，状态图，活动图，组件图，部署图。</li>
+</ul>
+<h2 id="用例图（Use-Case-Diagram）"><a href="#用例图（Use-Case-Diagram）" class="headerlink" title="用例图（Use Case Diagram）"></a>用例图（Use Case Diagram）</h2><ul>
+<li>用例图描述了系统的功能需求和用户之间的交互。</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdQ6G.png" alt="image-20240602221819611" style="zoom:50%;" />
+
+<h3 id="结构元素"><a href="#结构元素" class="headerlink" title="结构元素"></a>结构元素</h3><ul>
+<li>参与者（Actor）应用程序或系统进行交互的用户、组织或外部系统。用一个小人表示</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdEnr.png" alt="image-20240602221417953" style="zoom:50%;" />
+
+<ul>
+<li>用例（Use Case）就是外部可见的系统功能，对系统提供的服务进行描述。用椭圆表示 。</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdGDM.png" alt="image-20240602221517666" style="zoom:50%;" />
+
+<ul>
+<li>系统边界（System Boundary）来展示系统的一部分功能，这部分功能联系紧密。(就是具体的系统功能)。</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJd0k1.png" alt="image-20240602221856750" style="zoom:50%;" />
+
+<h3 id="关系元素"><a href="#关系元素" class="headerlink" title="关系元素"></a>关系元素</h3><ul>
+<li><p>关联</p>
+<p>说明：表示参与者与用例之间的通信，任何一方都可发送或接受消息。</p>
+<p>【箭头指向】：有时候也用箭头，将参与者与用例相连接，指向<strong>消息接收方</strong>。</p>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdcmI.png" alt="image-20240602223026891" style="zoom:50%;" />
+</li>
+<li><p>泛化：</p>
+<p>说明：就是通常理解的继承关系。</p>
+<p>【箭头指向】：指向<strong>父用例</strong>。</p>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJddYD.png" alt="image-20240602223520879" style="zoom:50%;" />
+</li>
+<li><p>包含：</p>
+<p>说明：用来把一个较复杂用例所表示的功能分解成较小的步骤。</p>
+<p>【箭头指向】：指向<strong>分解出来的功能</strong>用例。</p>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdfSP.png" alt="image-20240602223839994" style="zoom:50%;" />
+</li>
+<li><p>扩展：</p>
+<p>说明：是指用例功能的延伸，相当于为基础用例提供一个附加功能。</p>
+<p>【箭头指向】：指向<strong>基础用例</strong>。</p>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdlwb.png" alt="image-20240602224100213" style="zoom:50%;" /></li>
+</ul>
+<h2 id="类图（Class-Diagram）"><a href="#类图（Class-Diagram）" class="headerlink" title="类图（Class Diagram）"></a>类图（Class Diagram）</h2><ul>
+<li><p>类图展示了系统中的类、属性和方法之间的静态关系。</p>
+</li>
+<li><p>语法结构包括类名、属性、方法、关系（如继承、关联、聚合、组合等）、可见性等。</p>
+</li>
+<li><p>矩形框表示类，类名位于顶部，属性和方法位于中部和底部，用连线连接类之间的关系。</p>
+</li>
+</ul>
+<p><img src="https://ooo.0x0.ooo/2024/06/04/OJdy4t.png" alt="image-20240602193359591"></p>
+<blockquote>
+<p>名称上面加&lt;&lt;interface&gt;&gt;表示接口</p>
+</blockquote>
+<h3 id="类在UML中的表示"><a href="#类在UML中的表示" class="headerlink" title="类在UML中的表示"></a>类在UML中的表示</h3><ol>
+<li>名称部分:</li>
+</ol>
+<ul>
+<li>位置： 在顶端存放。</li>
+</ul>
+<ol start="2">
+<li>属性部分 :</li>
+</ol>
+<ul>
+<li><p>位置：在中间存放。</p>
+</li>
+<li><p>语法：[可见性]属性名[:类型][&#x3D;初始值] 。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：[]中内容可有可无</p>
+</blockquote>
+<ol start="3">
+<li>方法部分 :</li>
+</ol>
+<ul>
+<li><p>位置：在底部存放。</p>
+</li>
+<li><p>语法：[可见性]方法名([参数名:参数类型])[:返回值类型]。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：[]中内容可有可无，如果有多个参数，使用，隔开</p>
+</blockquote>
+<ol start="4">
+<li>可见性：</li>
+</ol>
+<ul>
+<li><p>“+”（public）表示公共的可见性，即该属性或方法对所有其他类都是可见的。</p>
+</li>
+<li><p>“-”（private）表示私有的可见性，即该属性或方法仅对定义它们的类可见。</p>
+</li>
+<li><p>“#”（protected）表示受保护的可见性，即该属性或方法对定义它们的类及其子类可见，但对其他类不可见。</p>
+</li>
+<li><p>“~”（package）表示包级的可见性，即该属性或方法对同一个包内的其他类可见，但对不同包内的类不可见。</p>
+</li>
+</ul>
+<h3 id="类图之中类与类之间的关系："><a href="#类图之中类与类之间的关系：" class="headerlink" title="类图之中类与类之间的关系："></a>类图之中类与类之间的关系：</h3><ol>
+<li><strong>泛化关系（Generalization）</strong></li>
+</ol>
+<ul>
+<li><p>语义：类和子类的关系，接口和子接口的关系。</p>
+</li>
+<li><p>语法：<code>extends</code></p>
+</li>
+<li><p>符号：带<strong>空心三角形的实线</strong>，由子类指向<strong>父类</strong>，或子接口指向<strong>父接口</strong>。</p>
+</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdviX.png" alt="image-20240602202541644" style="zoom:50%;" />
+
+<ol start="2">
+<li><strong>实现关系（Realization）</strong></li>
+</ol>
+<ul>
+<li><p>语义：类和接口之间的关系。</p>
+</li>
+<li><p>语法：<code>implements</code></p>
+</li>
+<li><p>符号：带<strong>空心三角箭头</strong>的<strong>虚线</strong>，由类指向<strong>实现的接口</strong>。</p>
+</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdPYU.png" alt="image-20240602203625736" style="zoom:50%;" />
+
+<ol start="3">
+<li><strong>依赖关系（Dependency）</strong></li>
+</ol>
+<ul>
+<li><p>语义：是一种使用关系，即一个类的实现需要另一个类的协助。</p>
+</li>
+<li><p>语法：类B作为类A的<strong>方法的参数或者局部变量</strong>存在。</p>
+</li>
+<li><p>符号：带<strong>普通箭头</strong>的<strong>虚线</strong>，指向<strong>被使用者</strong>。</p>
+</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdtqY.png" alt="image-20240602204404047" style="zoom:50%;" />
+
+<blockquote>
+<p>老司机只管开车，车是谁的不重要，给什么车开什么车。</p>
+</blockquote>
+<ol start="4">
+<li><strong>关联关系（Association）</strong></li>
+</ol>
+<ul>
+<li><p>语义：是一种拥有关系，它使得一个类知道另一个类的属性和方法。</p>
+</li>
+<li><p>语法：类B作为<strong>成员变量</strong>形成存在于类A中。</p>
+</li>
+<li><p>符号：带<strong>普通箭头</strong>的<strong>实线</strong>，指向<strong>被拥有者</strong>。双向的关联可以有两个箭头，或者没有箭头。单向的关联有一个箭头。</p>
+</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdDSq.png" alt="image-20240602205759418" style="zoom:50%;" />
+
+<blockquote>
+<p>自己买的车，想什么时候开就开。但是车是车，人是人，没有整体与部分的关系。</p>
+</blockquote>
+<ol start="5">
+<li><strong>聚合关系（Aggregation）</strong></li>
+</ol>
+<ul>
+<li><p>语义：是一种整体与部分的关系。且<strong>部分可以离开整体</strong>而单独存在。聚合关系是关联关系的一种，是强的关联关系；关联和聚合在语法上无法区分，必须考察具体的逻辑关系。</p>
+</li>
+<li><p>语法：类B作为<strong>成员变量</strong>形成存在于类A中。</p>
+</li>
+<li><p>符号：带<strong>空心菱形</strong>的<strong>实线</strong>，指向<strong>整体</strong>。</p>
+</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJd4Av.png" alt="image-20240602205729449" style="zoom:50%;" />
+
+<blockquote>
+<p>电脑有键盘才能输入信息，电脑是整体，键盘是部分，键盘也可以离开电脑，单纯的拿去敲。所以是聚合。</p>
+</blockquote>
+<ol start="6">
+<li><strong>组合关系（Composition）</strong></li>
+</ol>
+<ul>
+<li><p>语义：是一种整体与部分的关系。但<strong>部分不能离开整体</strong>而单独存在，组合关系是关联关系的一种，是比聚合关系还要强的关系。</p>
+</li>
+<li><p>语法：类B作为成员变量形成存在于类A中。</p>
+</li>
+<li><p>符号：带<strong>实心菱形</strong>的<strong>实线</strong>，指向<strong>整体</strong>。</p>
+</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdHCc.png" alt="image-20240602210104469" style="zoom:50%;" />
+
+<blockquote>
+<p>鸟是整体，翅膀是部分。鸟死了，翅膀也就不能飞了。所以是组合。</p>
+</blockquote>
+<h3 id="用例文档"><a href="#用例文档" class="headerlink" title="用例文档"></a>用例文档</h3><p>用例文档通常包含以下内容：</p>
+<ol>
+<li><strong>用例名称</strong>：清晰描述用例的名称，以便于识别和理解。</li>
+<li><strong>参与者</strong>：列出与用例相关的主要和次要参与者，包括他们的角色和责任。</li>
+<li><strong>摘要</strong>：简要概括用例的目标和内容，让读者能够快速了解用例的主要内容。</li>
+<li><strong>前置条件</strong>：列出用例发生前必须满足的条件或状态。</li>
+<li><strong>后置条件</strong>：列出用例完成后会发生的状态或结果。</li>
+<li><strong>事件流</strong>：描述参与者在完成用例的过程中发生的一系列交互行为<ul>
+<li>基本事件流：描述用例在通常情况下所发生的事件流的执行步骤，采用编号的方式表示发生的先后顺序；</li>
+<li>可选事件流：描述用例基本流程可能出现的分支事件。</li>
+</ul>
+</li>
+<li><strong>异常处理</strong>：描述用例可能遇到的异常情况，并指定相应的处理方式。</li>
+<li><strong>其他部分</strong>：根据需要，还可以包括用例的约束、前提假设、依赖关系等其他相关信息。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>用例名称</strong></th>
+<th>用户登录</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>简要描述</strong></td>
+<td>用户登录用例描述了用户如何通过系统进行身份认证并获得访问权限。</td>
+</tr>
+<tr>
+<td><strong>参与者</strong></td>
+<td>用户</td>
+</tr>
+<tr>
+<td><strong>前置条件</strong></td>
+<td>用户必须拥有有效的用户名和密码，并且系统必须处于正常运行状态。</td>
+</tr>
+<tr>
+<td><strong>后置条件</strong></td>
+<td>用户成功登录后，可以访问系统的特定功能和数据。</td>
+</tr>
+<tr>
+<td><strong>基本事件流</strong></td>
+<td>1.用户打开系统登录页面。<br>2.用户输入有效的用户名和密码。<br>3.系统验证用户提供的凭据。 <br>4.如果验证通过，系统显示登录成功的提示信息，并将用户重定向到系统主页。<br>5.如果验证失败，系统显示相应的错误信息，用户可以重新输入用户名和密码。</td>
+</tr>
+<tr>
+<td><strong>可选事件流</strong></td>
+<td>1.用户忘记密码。<br>2.用户点击“忘记密码”链接。<br>3.系统要求用户输入关联的邮箱地址。<br/>4.系统发送重置密码的链接到用户的邮箱。 <br/>5.用户点击邮箱中的链接，并设置新密码。</td>
+</tr>
+<tr>
+<td><strong>异常事件</strong></td>
+<td>1.用户连续多次输入错误的凭据。 系统锁定用户账户，需要管理员干预解锁。<br>2.用户输入的用户名不存在。 系统提示用户进行注册或重新输入用户名。</td>
+</tr>
+</tbody></table>
+<h2 id="状态图（State-Diagram）"><a href="#状态图（State-Diagram）" class="headerlink" title="状态图（State Diagram）"></a>状态图（State Diagram）</h2><ul>
+<li><p>状态图描述了对象在不同状态下的行为转换。</p>
+</li>
+<li><p>主要元素包括状态（表示对象可能处于的状态）、转移（表示状态之间的转换条件）、起始状态和结束状态等。</p>
+</li>
+<li><p>初态用<strong>实心圆点</strong>表示，终态用<strong>圆形内嵌圆点</strong>表示，状态用<strong>圆角矩形</strong>表示，箭头表示一个转移&#x2F;一个动作 ，箭头上的文字：表示一个事件</p>
+</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdjnl.png" alt="image-20240603175900642" style="zoom:50%;" />
+
+<h2 id="活动图（Activity-Diagram）"><a href="#活动图（Activity-Diagram）" class="headerlink" title="活动图（Activity Diagram）"></a>活动图（Activity Diagram）</h2><ul>
+<li>活动图展示了系统中的活动流程和控制流程。</li>
+<li>主要元素包括活动（表示系统中的一个动作或操作）、控制节点（表示控制流的分支和合并点）、决策节点（表示条件判断）等。</li>
+<li>起点用<strong>实心圆点</strong>表示，终点用<strong>圆形内嵌圆点</strong>表示，活动用<strong>平滑圆角矩形</strong>表示，决策节点用<strong>菱形</strong>表示，控制节点用粗直线和周围的箭头表示。</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJd68B.png" alt="image-20240603182651131" style="zoom:50%;" />
+
+<h2 id="时序图（Sequence-Diagram）"><a href="#时序图（Sequence-Diagram）" class="headerlink" title="时序图（Sequence Diagram）"></a>时序图（Sequence Diagram）</h2><ul>
+<li>序列图描述了对象之间的交互和消息传递顺序。</li>
+<li>主要元素包括对象（表示系统中的实体）、消息（表示对象之间的交互）、生命线（表示对象的生命周期）等。</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdupK.png" alt="image-20240603184446201" style="zoom:50%;" />
+
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdJmp.png" alt="img" style="zoom:50%;" />
+
+<blockquote>
+<p>loop操作表示循环、alt操作表示选择</p>
+</blockquote>
+<h2 id="包图（Package-Diagram）"><a href="#包图（Package-Diagram）" class="headerlink" title="包图（Package Diagram）"></a>包图（Package Diagram）</h2><ul>
+<li><p>包图用来描述系统的包结构和包之间的关系的一种图示工具。</p>
+</li>
+<li><p>包图可以帮助我们更好地理解系统的组织结构、模块化设计以及各个模块之间的依赖关系。</p>
+</li>
+</ul>
+<h3 id="基本元素"><a href="#基本元素" class="headerlink" title="基本元素"></a>基本元素</h3><ol>
+<li><strong>包（Package）：</strong> 用矩形表示，通常包含包名，有时也会显示包的内容。</li>
+<li><strong>类&#x2F;接口：</strong> 用矩形表示，包含类名或接口名。</li>
+</ol>
+<h3 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h3><ul>
+<li>《Use》关系表示使用依赖，<code>Web Shopping</code>依赖<code>Payment</code>。</li>
+<li>《Merge》关系表示合并，<code>Web Shopping</code>合并了<code>Shopping Cart</code>就拥有了<code>Shopping Cart</code>的功能。</li>
+<li>《Access》关系表示私有引入，比如代码中的指定包名类名。</li>
+<li>《Import》关系表示公共引入，比如Java中的<code>import</code>之后，就可以直接使用<code>import</code>包中的类了。</li>
+</ul>
+<img src="https://ooo.0x0.ooo/2024/06/04/OJdpbj.png" alt="img" style="zoom:50%;" />
+
+<h2 id="部署图（Deployment-Diagram）"><a href="#部署图（Deployment-Diagram）" class="headerlink" title="部署图（Deployment Diagram）"></a>部署图（Deployment Diagram）</h2><ul>
+<li>部署图描述了系统的部署架构和物理节点。</li>
+</ul>
+<p><img src="https://ooo.0x0.ooo/2024/06/04/OJdg6x.png" alt="img"></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]:Java旅途, 一文掌握14种UML图[EB&#x2F;OL]. 腾讯云开发者社区, 2020-08-21. <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1684161">https://cloud.tencent.com/developer/article/1684161</a>.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">liuming</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/af8b09ba.html">http://example.com/posts/af8b09ba.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">liuming的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.imgtg.com/2023/01/21/SqAtX.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/b3adc005.html" title="seata使用nacos做注册和配置中心"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">seata使用nacos做注册和配置中心</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.imgtg.com/2023/01/21/SqAtX.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">liuming</div><div class="author-info__description">liuming的个人博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/liuming10086"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#UML"><span class="toc-number">1.</span> <span class="toc-text">UML</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E4%BE%8B%E5%9B%BE%EF%BC%88Use-Case-Diagram%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">用例图（Use Case Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0"><span class="toc-number">1.2.1.</span> <span class="toc-text">结构元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E5%85%83%E7%B4%A0"><span class="toc-number">1.2.2.</span> <span class="toc-text">关系元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9B%BE%EF%BC%88Class-Diagram%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">类图（Class Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9C%A8UML%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.3.1.</span> <span class="toc-text">类在UML中的表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9B%BE%E4%B9%8B%E4%B8%AD%E7%B1%BB%E4%B8%8E%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-number">1.3.2.</span> <span class="toc-text">类图之中类与类之间的关系：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E4%BE%8B%E6%96%87%E6%A1%A3"><span class="toc-number">1.3.3.</span> <span class="toc-text">用例文档</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E5%9B%BE%EF%BC%88State-Diagram%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">状态图（State Diagram）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B4%BB%E5%8A%A8%E5%9B%BE%EF%BC%88Activity-Diagram%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">活动图（Activity Diagram）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E5%BA%8F%E5%9B%BE%EF%BC%88Sequence-Diagram%EF%BC%89"><span class="toc-number">1.6.</span> <span class="toc-text">时序图（Sequence Diagram）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E5%9B%BE%EF%BC%88Package-Diagram%EF%BC%89"><span class="toc-number">1.7.</span> <span class="toc-text">包图（Package Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0"><span class="toc-number">1.7.1.</span> <span class="toc-text">基本元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB"><span class="toc-number">1.7.2.</span> <span class="toc-text">关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%9B%BE%EF%BC%88Deployment-Diagram%EF%BC%89"><span class="toc-number">1.8.</span> <span class="toc-text">部署图（Deployment Diagram）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">1.9.</span> <span class="toc-text">参考文献</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/af8b09ba.html" title="UML">UML</a><time datetime="2024-06-04T15:58:44.000Z" title="发表于 2024-06-04 23:58:44">2024-06-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/b3adc005.html" title="seata使用nacos做注册和配置中心">seata使用nacos做注册和配置中心</a><time datetime="2024-06-01T05:07:15.000Z" title="发表于 2024-06-01 13:07:15">2024-06-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/987550c9.html" title="酷狗音乐APi">酷狗音乐APi</a><time datetime="2023-02-05T05:20:55.000Z" title="发表于 2023-02-05 13:20:55">2023-02-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/f5a68550.html" title="网易云音乐Api">网易云音乐Api</a><time datetime="2023-02-04T07:47:32.000Z" title="发表于 2023-02-04 15:47:32">2023-02-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/ae0f95e0.html" title="SpringMVC">SpringMVC</a><time datetime="2023-01-21T12:27:33.000Z" title="发表于 2023-01-21 20:27:33">2023-01-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By liuming</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div></div></body></html>
